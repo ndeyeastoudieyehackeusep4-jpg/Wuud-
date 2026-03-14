@@ -1,0 +1,847 @@
+/* ============================================
+   ATELIERS PAGE STYLES - SOLID PRINCIPLES
+   ============================================
+   Single Responsibility: Each section has its own styles
+   Open/Closed: Extensible without modifying existing code
+   Liskov Substitution: Consistent styling patterns
+   Interface Segregation: Specific styles for specific needs
+   Dependency Inversion: Uses CSS variables from main styles
+   ============================================ */
+
+/* HERO SECTION - ATELIERS */
+.ateliers-hero {
+    margin-top: 80px;
+    position: relative;
+    height: 400px;
+    background: linear-gradient(rgba(62, 39, 35, 0.6), rgba(62, 39, 35, 0.6)),
+                url('images/Ateliers/IM 1.jpeg') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.ateliers-hero-content {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    color: white;
+    padding: 2rem;
+}
+
+.ateliers-hero h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    letter-spacing: 3px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+    font-family: 'Gabriela', serif;
+}
+
+.ateliers-subtitle {
+    font-size: 1.3rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* PRESENTATION SECTION */
+.ateliers-presentation {
+    padding: 4rem 2rem;
+    background-color: white;
+}
+
+.ateliers-presentation p {
+    max-width: 900px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    color: var(--color-dark);
+    line-height: 1.9;
+    text-align: center;
+}
+
+.ateliers-presentation-alt {
+    background-color: var(--color-secondary);
+}
+
+.ateliers-section-title {
+    font-size: 1.8rem;
+    color: var(--color-dark);
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+    font-family: 'Gabriela', serif;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.ateliers-section-title::before,
+.ateliers-section-title::after {
+    content: '';
+    flex: 0 0 60px;
+    height: 2px;
+    background-color: var(--color-dark);
+}
+
+.ateliers-principles-intro {
+    margin-top: 2rem !important;
+    font-weight: 600 !important;
+}
+
+.ateliers-principles-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 2rem auto 0;
+}
+
+.ateliers-principle-card {
+    text-align: center;
+    padding: 2rem 1rem;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.ateliers-principle-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.ateliers-principle-text {
+    font-size: 0.95rem;
+    color: var(--color-dark);
+    line-height: 1.4;
+    margin: 0;
+}
+
+.ateliers-quote {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--color-dark);
+    text-align: center;
+    max-width: 800px;
+    margin: 6rem auto 0;
+    line-height: 1.6;
+    font-style: italic;
+}
+
+/* PROCESSUS SECTION */
+.ateliers-processus {
+    padding: 4rem 2rem;
+    background-color: var(--color-light);
+}
+
+.ateliers-processus-title h2 {
+    font-size: 1.8rem;
+    color: var(--color-dark);
+    font-weight: 700;
+    font-family: 'Gabriela', serif;
+    text-align: left;
+    margin-bottom: 25rem;
+}
+
+/* PROCESSUS GRID - 2x4 */
+.processus-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+}
+
+.processus-card {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.processus-card-number {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 30px;
+    height: 30px;
+    background-color: var(--color-secondary);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: var(--color-dark);
+    z-index: 10;
+}
+
+.processus-card-img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+}
+
+.processus-card-content {
+    padding: 1.2rem;
+}
+
+.processus-card-content h3 {
+    font-size: 1rem;
+    color: var(--color-dark);
+    font-weight: 700;
+    margin-bottom: 0.8rem;
+    text-align: center;
+    font-family: 'Gabriela', serif;
+}
+
+.processus-card-content p {
+    font-size: 0.85rem;
+    color: var(--color-dark);
+    line-height: 1.4;
+    margin-bottom: 0.8rem;
+}
+
+.processus-card-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.processus-card-content ul li {
+    font-size: 0.75rem;
+    color: var(--color-dark);
+    line-height: 1.4;
+    margin-bottom: 0.3rem;
+    padding-left: 0.8rem;
+    position: relative;
+}
+
+.processus-card-content ul li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: var(--color-primary);
+}
+
+/* FEMMES ARTISANES SECTION */
+.ateliers-femmes {
+    padding: 5rem 2rem;
+    background-color: var(--color-light);
+}
+
+.ateliers-femmes-title {
+    font-size: 2rem;
+    color: var(--color-dark);
+    font-weight: 700;
+    font-family: 'Georgia', serif;
+    text-align: center;
+    margin-bottom: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.ateliers-femmes-title::before,
+.ateliers-femmes-title::after {
+    content: '';
+    flex: 0 0 80px;
+    height: 2px;
+    background-color: var(--color-dark);
+}
+
+.ateliers-femmes-content-row {
+    display: flex;
+    gap: 3rem;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.ateliers-femmes-image {
+    max-width: 40%;
+    flex: 1;
+    background-color: white;
+    padding: 1rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+}
+
+.ateliers-femmes-img {
+    width: 100%;
+    display: block;
+}
+
+.ateliers-femmes-content {
+    flex: 1;
+    max-width: 50%;
+    margin: 0;
+}
+
+.ateliers-femmes-content p {
+    font-size: 1.3rem;
+    color: var(--color-dark);
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+}
+
+.ateliers-femmes-content h3 {
+    font-size: 1.3rem;
+    color: var(--color-dark);
+    font-weight: 600;
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+}
+
+.ateliers-femmes-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.ateliers-femmes-list li {
+    font-size: 1.2rem;
+    color: var(--color-dark);
+    line-height: 1.8;
+    margin-bottom: 0.5rem;
+    padding-left: 1.2rem;
+    position: relative;
+}
+
+.ateliers-femmes-list li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: var(--color-primary);
+}
+
+.ateliers-femmes-quote {
+    font-size: 1.2rem;
+    font-style: italic;
+    color: #666;
+    text-align: center;
+    max-width: 700px;
+    margin: 3rem auto 0;
+    line-height: 1.6;
+}
+
+/* ATELIERS PARTICIPATIFS SECTION */
+.ateliers-participatifs {
+    padding: 5rem 2rem;
+    background-color: var(--color-light);
+}
+
+.ateliers-participatifs-title {
+    font-size: 2rem;
+    color: var(--color-dark);
+    font-weight: 700;
+    font-family: 'Gabriela', serif;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.ateliers-participatifs-title::before,
+.ateliers-participatifs-title::after {
+    content: '';
+    flex: 0 0 60px;
+    height: 2px;
+    background-color: var(--color-dark);
+}
+
+.ateliers-participatifs-intro {
+    font-size: 1.05rem;
+    color: var(--color-dark);
+    line-height: 1.8;
+    max-width: 800px;
+    margin-bottom: 2.5rem;
+}
+
+.ateliers-participatifs-images {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    margin-bottom: 2.5rem;
+}
+
+.ateliers-participatifs-img {
+    width: 35%;
+    max-width: 400px;
+    background-color: white;
+    padding: 0.8rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.ateliers-participatifs-img img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.ateliers-participatifs-content {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.ateliers-participatifs-subtitle {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--color-dark);
+    margin-bottom: 1rem;
+}
+
+.ateliers-participatifs-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.5rem 0;
+}
+
+.ateliers-participatifs-list li {
+    font-size: 1rem;
+    color: var(--color-dark);
+    line-height: 1.8;
+    margin-bottom: 0.5rem;
+    padding-left: 1.2rem;
+    position: relative;
+}
+
+.ateliers-participatifs-list li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: var(--color-primary);
+}
+
+.ateliers-participatifs-conclusion {
+    font-size: 1rem;
+    color: var(--color-dark);
+    line-height: 1.8;
+    font-style: italic;
+}
+
+/* IMPACT SOCIAL ET CULTUREL SECTION */
+.impact-social {
+    background-color: var(--color-light);
+    padding: 80px 20px;
+}
+
+.impact-container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.impact-title {
+    font-size: 32px;
+    font-weight: 600;
+    color: #3B2A1A;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    font-family: 'Gabriela', serif;
+}
+
+.impact-line {
+    flex: 0 0 80px;
+    height: 1px;
+    background-color: var(--color-dark);
+}
+
+.impact-subtitle {
+    font-size: 18px;
+    color: #3B2A1A;
+    opacity: 0.8;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.impact-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: stretch;
+    margin-top: 50px;
+}
+
+.impact-text-card {
+    background: var(--color-secondary);
+    padding: 30px;
+    border-radius: 8px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.impact-text-card p {
+    font-size: 16px;
+    color: #3B2A1A;
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+.impact-text-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 15px 0;
+}
+
+.impact-text-card ul li {
+    font-size: 16px;
+    color: #3B2A1A;
+    line-height: 1.7;
+    margin-bottom: 8px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.impact-text-card ul li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: #3B2A1A;
+}
+
+.impact-image {
+    display: flex;
+    align-items: center;
+}
+
+.impact-image img {
+    width: 80%;
+    border-radius: 8px;
+    object-fit: cover;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    display: block;
+    margin: 0 auto;
+}
+
+.impact-cta-text {
+    text-align: center;
+    font-size: 18px;
+    color: #3B2A1A;
+    margin-top: 60px;
+}
+
+.impact-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    width: 100%;
+}
+
+.impact-btn {
+    background: var(--color-primary);
+    color: white;
+    padding: 14px 28px;
+    border-radius: 25px;
+    border: none;
+    font-size: 15px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    transition: background 0.3s ease;
+    min-width: 200px;
+}
+
+.impact-btn:hover {
+    background: #7A3E1C;
+}
+
+@media (max-width: 768px) {
+    .impact-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .impact-image {
+        order: -1;
+    }
+    
+    .impact-title {
+        font-size: 24px;
+    }
+    
+    .impact-line {
+        flex: 0 0 40px;
+    }
+}
+
+/* SECTIONS GÉNÉRIQUES */
+.ateliers-section {
+    padding: 5rem 2rem;
+    background-color: var(--color-light);
+}
+
+.ateliers-section-alt {
+    background-color: white;
+}
+
+.ateliers-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* CONTENT ROW - Image + Text */
+.ateliers-content-row {
+    display: flex;
+    gap: 4rem;
+    align-items: center;
+}
+
+.ateliers-row-reverse {
+    flex-direction: row-reverse;
+}
+
+.ateliers-image {
+    flex: 1;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.ateliers-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.ateliers-image:hover .ateliers-img {
+    transform: scale(1.05);
+}
+
+.ateliers-text {
+    flex: 1;
+}
+
+.ateliers-text h2 {
+    font-size: 2rem;
+    color: var(--color-dark);
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+    font-family: 'Gabriela', serif;
+}
+
+.ateliers-text p {
+    font-size: 1.05rem;
+    color: var(--color-dark);
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+}
+
+.ateliers-features {
+    list-style: none;
+    padding: 0;
+    margin-top: 1.5rem;
+}
+
+.ateliers-features li {
+    font-size: 1rem;
+    color: var(--color-dark);
+    margin-bottom: 0.8rem;
+    padding-left: 0;
+    position: relative;
+}
+
+/* GALLERY SECTION */
+.ateliers-gallery {
+    padding: 5rem 2rem;
+    background-color: var(--color-secondary);
+}
+
+.ateliers-gallery-title {
+    text-align: center;
+    font-size: 2rem;
+    color: var(--color-dark);
+    margin-bottom: 3rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.ateliers-gallery-title::before,
+.ateliers-gallery-title::after {
+    content: '';
+    flex: 0 0 100px;
+    height: 2px;
+    background-color: var(--color-dark);
+}
+
+.ateliers-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+}
+
+.ateliers-grid-item {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ateliers-grid-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.ateliers-grid-img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 1024px) {
+    .ateliers-content-row {
+        gap: 3rem;
+    }
+    
+    .ateliers-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 1024px) {
+    .processus-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .ateliers-femmes-image {
+        max-width: 90%;
+    }
+    
+    .ateliers-participatifs-images {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .ateliers-participatifs-img {
+        width: 80%;
+    }
+}
+
+@media (max-width: 768px) {
+    .ateliers-hero {
+        height: 300px;
+    }
+    
+    .ateliers-hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .ateliers-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .ateliers-content-row,
+    .ateliers-row-reverse {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    
+    .ateliers-image {
+        width: 100%;
+    }
+    
+    .ateliers-text h2 {
+        font-size: 1.6rem;
+    }
+    
+    .ateliers-text p {
+        font-size: 1rem;
+    }
+    
+    .ateliers-gallery-title {
+        font-size: 1.5rem;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .ateliers-gallery-title::before,
+    .ateliers-gallery-title::after {
+        flex: 0 0 60px;
+    }
+    
+    .ateliers-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .ateliers-section-title {
+        font-size: 1.5rem;
+    }
+    
+    .ateliers-principles-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+    
+    .ateliers-principle-icon {
+        font-size: 2.5rem;
+    }
+    
+    .ateliers-principle-text {
+        font-size: 0.85rem;
+    }
+    
+    .processus-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .ateliers-femmes-content-row {
+        flex-direction: column;
+    }
+    
+    .ateliers-femmes-image,
+    .ateliers-femmes-content {
+        max-width: 100%;
+    }
+    
+    .ateliers-femmes-title {
+        font-size: 1.6rem;
+    }
+    
+    .ateliers-femmes-image {
+        max-width: 100%;
+        padding: 0.5rem;
+    }
+    
+    .ateliers-femmes-content p,
+    .ateliers-femmes-list li {
+        font-size: 0.95rem;
+    }
+    
+    .ateliers-femmes-quote {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .ateliers-hero h1 {
+        font-size: 2rem;
+    }
+    
+    .ateliers-section {
+        padding: 3rem 1rem;
+    }
+    
+    .ateliers-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .ateliers-grid-img {
+        height: 200px;
+    }
+}

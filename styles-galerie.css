@@ -1,0 +1,215 @@
+/* ============================================
+   GALERIE PAGE STYLES - SOLID PRINCIPLES
+   ============================================
+   Single Responsibility: Each section has its own styles
+   Open/Closed: Extensible without modifying existing code
+   Liskov Substitution: Consistent styling patterns
+   Interface Segregation: Specific styles for specific needs
+   Dependency Inversion: Uses CSS variables
+   ============================================ */
+
+/* HERO SECTION */
+.galerie-hero {
+    margin-top: 80px;
+    position: relative;
+    height: 450px;
+    overflow: hidden;
+}
+
+.galerie-hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.galerie-hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 10;
+}
+
+.galerie-hero-text h1 {
+    font-size: 65px;
+    color: white;
+    font-family: 'Gabriela', serif;
+    font-weight: 600;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 15px 30px;
+    border-radius: 5px;
+}
+
+/* CONTAINER */
+.galerie-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+/* SECTION ÉDITORIALE */
+.galerie-editorial {
+    background-color: #F4EEE8;
+}
+
+.galerie-title {
+    font-size: 24px;
+    font-style: italic;
+    text-align: center;
+    color: #3B2A1A;
+    margin-top: 60px;
+    margin-bottom: 40px;
+    font-family: 'Gabriela', serif;
+}
+
+/* MIXED GRID - 1 large + 2 small */
+.galerie-grid-mixed {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    gap: 20px;
+    align-items: start;
+}
+
+.galerie-large {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.galerie-large img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.galerie-large:hover img {
+    transform: scale(1.05);
+}
+
+.galerie-small {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.galerie-small img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.galerie-small:hover img {
+    transform: scale(1.05);
+}
+
+/* THREE COLUMN GRID */
+.galerie-grid-three {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.galerie-item {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.galerie-item:nth-child(1) img {
+    height: 300px;
+}
+
+.galerie-item:nth-child(2) img {
+    height: 350px;
+}
+
+.galerie-item:nth-child(3) img {
+    height: 280px;
+}
+
+.galerie-item:nth-child(4) img {
+    height: 320px;
+}
+
+.galerie-item:nth-child(5) img {
+    height: 290px;
+}
+
+.galerie-item:nth-child(6) img {
+    height: 340px;
+}
+
+.galerie-item:nth-child(7) img {
+    height: 290px;
+}
+
+.galerie-item:nth-child(8) img {
+    height: 330px;
+}
+
+.galerie-item:nth-child(9) img {
+    height: 280px;
+}
+
+.galerie-item:nth-child(10) img {
+    height: 310px;
+}
+
+.galerie-item img {
+    width: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.galerie-item:hover img {
+    transform: scale(1.05);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .galerie-hero {
+        height: 300px;
+    }
+    
+    .galerie-hero-text h1 {
+        font-size: 24px;
+    }
+    
+    .galerie-container {
+        padding: 40px 15px;
+    }
+    
+    .galerie-title {
+        font-size: 20px;
+        margin-top: 40px;
+        margin-bottom: 30px;
+    }
+    
+    .galerie-grid-mixed {
+        grid-template-columns: 1fr;
+    }
+    
+    .galerie-large img {
+        height: 300px;
+    }
+    
+    .galerie-small img {
+        height: 200px;
+    }
+    
+    .galerie-grid-three {
+        grid-template-columns: 1fr;
+    }
+    
+    .galerie-item img {
+        height: 280px !important;
+    }
+}

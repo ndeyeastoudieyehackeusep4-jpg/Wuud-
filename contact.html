@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contactez-nous - Wuude</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gabriela&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles-contact.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <img src="images/Logo-Principal.png" alt="WUUDÉ" class="logo-img">
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="a-propos.html">À propos</a></li>
+                    <li><a href="produits.html">Produits</a></li>
+                    <li><a href="ateliers.html">Ateliers</a></li>
+                    <li><a href="galerie.html">Galerie</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Title -->
+    <section class="contact-title">
+        <h1>Contactez - nous</h1>
+        <p>Une question ou envie de participer à un atelier ?</p>
+    </section>
+
+    <!-- Main Content -->
+    <main class="contact-container">
+        <div class="contact-grid">
+            <!-- Left Column - Image -->
+            <div class="contact-image">
+                <img src="images/contact/Meuf.png" alt="Portrait artisanal Wuude">
+            </div>
+
+            <!-- Right Column - Form -->
+            <div class="contact-form-wrapper">
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label for="nom">Nom</label>
+                        <input type="text" id="nom" name="nom" placeholder="Votre nom" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Votre email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="sujet">Sujet</label>
+                        <select id="sujet" name="sujet" required>
+                            <option value="" disabled selected>Choisir un sujet</option>
+                            <option value="question">Question générale</option>
+                            <option value="atelier">Participer à un atelier</option>
+                            <option value="commande">Passer une commande</option>
+                            <option value="partenariat">Partenariat</option>
+                            <option value="autre">Autre</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Votre message..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Envoyer</button>
+                </form>
+
+                <!-- Contact Info -->
+                <div class="contact-info">
+                    <p>📧 wuudesenegal@gmail.com</p>
+                    <p>📞 +221 77 091 63 85</p>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

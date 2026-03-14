@@ -1,0 +1,606 @@
+/* ============================================
+   PRODUITS PAGE STYLES - SOLID PRINCIPLES
+   ============================================
+   Single Responsibility: Each section has its own styles
+   Open/Closed: Extensible without modifying existing code
+   Liskov Substitution: Consistent styling patterns
+   Interface Segregation: Specific styles for specific needs
+   Dependency Inversion: Uses CSS variables from main styles
+   ============================================ */
+
+/* ANIMATIONS */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Image loading animation */
+img {
+    transition: opacity 0.3s ease;
+}
+
+img.loaded {
+    opacity: 1;
+}
+
+/* HERO SECTION - NOS CRÉATIONS */
+.creations-hero {
+    margin-top: 80px;
+    position: relative;
+    height: 600px;
+    background: linear-gradient(rgba(139, 111, 71, 0.3), rgba(62, 39, 35, 0.5)),
+                url('images/produits/IMG 1.jpeg') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    overflow: hidden;
+}
+
+.creations-hero-content {
+    position: relative;
+    z-index: 10;
+    max-width: 700px;
+    padding: 3rem;
+    margin-left: 3rem;
+    color: white;
+}
+
+.creations-hero h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+    font-family: 'Gabriela', serif;
+}
+
+.creations-hero p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+    font-weight: 400;
+    letter-spacing: 0.3px;
+}
+
+.creations-hero-img {
+    display: none; /* Image is used as background */
+}
+
+/* SECTION MANIÈRE DE CRÉER */
+.maniere-creer {
+    background-color: var(--color-secondary);
+    padding: 5rem 2rem;
+}
+
+.maniere-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.maniere-text {
+    padding-right: 2rem;
+}
+
+.maniere-text h2 {
+    font-size: 2.2rem;
+    color: var(--color-dark);
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.maniere-text p {
+    font-size: 1rem;
+    color: var(--color-dark);
+    margin-bottom: 1.5rem;
+    line-height: 1.7;
+}
+
+.maniere-text h3 {
+    font-size: 1.1rem;
+    color: var(--color-dark);
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.maniere-list {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 2rem;
+}
+
+.maniere-list li {
+    font-size: 1rem;
+    color: var(--color-dark);
+    margin-bottom: 0.5rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.maniere-list li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: var(--color-primary);
+    font-size: 1.5rem;
+    line-height: 1;
+}
+
+.maniere-image {
+    position: relative;
+    height: 500px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.maniere-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.maniere-image:hover .maniere-img {
+    transform: scale(1.05);
+}
+
+/* SECTION COLLECTIONS */
+.collections {
+    background-color: white;
+    padding: 5rem 2rem 3rem;
+    text-align: center;
+}
+
+.collections-title {
+    font-size: 2.5rem;
+    color: var(--color-dark);
+    margin-bottom: 2rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.collections-title::before,
+.collections-title::after {
+    content: '';
+    flex: 0 0 100px;
+    height: 2px;
+    background-color: var(--color-dark);
+}
+
+.collections-intro {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.collections-intro p {
+    font-size: 1.1rem;
+    color: var(--color-dark);
+    line-height: 1.7;
+}
+
+/* COLLECTION CATEGORY - SACS + CHAPEAUX */
+.collection-category {
+    background-color: var(--color-secondary);
+    padding: 4rem 2rem;
+    margin: 3rem auto;
+    max-width: 1200px;
+    border-radius: 8px;
+}
+
+.category-title {
+    font-size: 1.5rem;
+    color: var(--color-dark);
+    margin-bottom: 3rem;
+    font-weight: 400;
+    text-align: center;
+    font-family: 'Gabriela', serif;
+    letter-spacing: 0.5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.category-title::before,
+.category-title::after {
+    content: '';
+    flex: 0 0 80px;
+    height: 2px;
+    background-color: var(--color-dark);
+}
+
+/* PRODUCTS GRID */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.product-card {
+    background-color: white;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.product-image {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    background-color: var(--color-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover .product-img {
+    transform: scale(1.1);
+}
+
+.product-name {
+    text-align: center;
+    padding: 1rem;
+    font-size: 1rem;
+    color: var(--color-dark);
+    font-weight: 500;
+    background-color: white;
+    margin: 0;
+}
+
+.product-name-underline {
+    text-align: center;
+    padding: 1rem;
+    font-size: 1.1rem;
+    color: var(--color-dark);
+    font-weight: 600;
+    background-color: white;
+    margin: 0;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+/* COLLECTION DESCRIPTION */
+.collection-description {
+    background-color: white;
+    padding: 2.5rem;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    text-align: left;
+}
+
+.collection-description p {
+    font-size: 1rem;
+    color: var(--color-dark);
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+}
+
+.description-subtitle {
+    font-weight: 600;
+    margin-top: 1.5rem;
+    margin-bottom: 0.8rem !important;
+}
+
+.description-list {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 1.5rem;
+}
+
+.description-list li {
+    font-size: 0.95rem;
+    color: var(--color-dark);
+    margin-bottom: 0.5rem;
+    padding-left: 1.5rem;
+    position: relative;
+    line-height: 1.6;
+}
+
+.description-list li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: var(--color-primary);
+    font-size: 1.3rem;
+    line-height: 1;
+}
+
+.description-note {
+    font-style: italic;
+    color: var(--color-dark);
+    margin-bottom: 0 !important;
+}
+
+/* MATIÈRE & BERET SECTION - Two blocks side by side */
+.matiere-beret-container {
+    display: flex;
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    align-items: stretch;
+}
+
+.matiere-image {
+    flex: 1;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.matiere-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.beret-info {
+    flex: 1;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.beret-info p {
+    font-size: 1rem;
+    color: var(--color-dark);
+    line-height: 1.7;
+    margin-bottom: 1rem;
+}
+
+.beret-info .description-subtitle {
+    font-weight: 600;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.beret-info .description-list {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 1rem;
+}
+
+.beret-info .description-list li {
+    font-size: 0.95rem;
+    color: var(--color-dark);
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+}
+
+.beret-info .description-note {
+    font-style: italic;
+    color: var(--color-dark);
+}
+
+/* PRODUCTS GRID SINGLE - Pour l'affichage d'une seule image (Section Sacs) */
+.products-grid-single {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-bottom: 3rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.product-card-large {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card-large:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+}
+
+.product-card-large .product-image {
+    height: 450px;
+}
+
+.product-card-large .product-name {
+    font-size: 1.2rem;
+    padding: 1.5rem;
+    font-weight: 600;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 1024px) {
+    .maniere-container {
+        gap: 3rem;
+    }
+    
+    .maniere-text {
+        padding-right: 1rem;
+    }
+    
+    .maniere-image {
+        height: 400px;
+    }
+    
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .creations-hero {
+        height: 500px;
+        margin-top: 150px;
+    }
+    
+    .creations-hero-content {
+        margin-left: 1rem;
+        padding: 2rem;
+    }
+    
+    .creations-hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .creations-hero p {
+        font-size: 1rem;
+    }
+    
+    .maniere-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .maniere-text {
+        padding-right: 0;
+    }
+    
+    .maniere-text h2 {
+        font-size: 1.8rem;
+    }
+    
+    .maniere-image {
+        height: 350px;
+    }
+    
+    .collections-title {
+        font-size: 2rem;
+    }
+    
+    .collection-category {
+        padding: 3rem 1.5rem;
+    }
+    
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+    
+    .product-image {
+        height: 200px;
+    }
+    
+    .collection-description {
+        padding: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .creations-hero {
+        height: 400px;
+    }
+    
+    .creations-hero-content {
+        margin-left: 0.5rem;
+        padding: 1.5rem;
+    }
+    
+    .creations-hero h1 {
+        font-size: 2rem;
+    }
+    
+    .creations-hero p {
+        font-size: 0.9rem;
+    }
+    
+    .maniere-text h2 {
+        font-size: 1.5rem;
+    }
+    
+    .maniere-text p,
+    .maniere-list li {
+        font-size: 0.95rem;
+    }
+    
+    .maniere-image {
+        height: 300px;
+    }
+    
+    .collections-title {
+        font-size: 1.8rem;
+    }
+    
+    .collection-category {
+        padding: 2rem 1rem;
+        margin: 2rem auto;
+    }
+    
+    .category-title {
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
+    }
+    
+    .products-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .product-image {
+        height: 250px;
+    }
+    
+    .collection-description {
+        padding: 1.5rem;
+    }
+    
+    .collection-description p,
+    .description-list li {
+        font-size: 0.9rem;
+    }
+    
+    /* Responsive pour la section Sacs */
+    .products-grid-single {
+        max-width: 100%;
+    }
+    
+    .product-card-large .product-image {
+        height: 300px;
+    }
+    
+    /* Responsive pour la section Matière & Beret */
+    .matiere-beret-container {
+        flex-direction: column;
+    }
+    
+    .matiere-image {
+        height: 250px;
+    }
+    
+    .beret-info {
+        padding: 1.5rem;
+    }
+    
+    .beret-info p {
+        font-size: 0.95rem;
+    }
+}

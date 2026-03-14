@@ -1,0 +1,762 @@
+/* STYLES SPÉCIFIQUES PAGE À PROPOS */
+
+/* SECTION PAGE TITLE */
+.page-title {
+    margin-top: 80px;
+    background-color: var(--color-light);
+    padding: 1.5rem 2rem;
+    text-align: center;
+    border-bottom: 3px solid var(--color-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.page-title h1 {
+    font-size: 1.8rem;
+    color: var(--color-dark);
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin: 0;
+}
+
+/* SECTION L'HÉRITAGE */
+.heritage-section {
+    background: linear-gradient(rgba(62, 39, 35, 0.5), rgba(62, 39, 35, 0.5)),
+                url('images/propos/IM1.png') center/cover no-repeat;
+    padding: 5rem 2rem;
+    color: white;
+    text-align: left;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+}
+
+.heritage-content {
+    max-width: 700px;
+    padding-left: 3rem;
+}
+
+.heritage-section h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.heritage-section p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* SECTION POURQUOI WUUDÉ */
+.pourquoi-section {
+    background-color: var(--color-light);
+    padding: 5rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.pourquoi-section h2 {
+    text-align: center;
+    font-size: 2.2rem;
+    color: var(--color-dark);
+    margin-bottom: 3rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.pourquoi-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 1.5rem;
+    max-width: 800px;
+    margin: 0 auto 3rem auto;
+}
+
+.pourquoi-title::before,
+.pourquoi-title::after {
+    content: '';
+    flex: 0 1 120px;
+    height: 1px;
+    background-color: #ccc;
+}
+
+.pourquoi-container {
+    display: grid;
+    grid-template-columns: 1fr 0.9fr;
+    gap: 2.5rem;
+    align-items: flex-start;
+    margin-bottom: 3rem;
+}
+
+.pourquoi-images {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.pourquoi-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.pourquoi-img:hover {
+    transform: scale(1.02);
+}
+
+.pourquoi-text p {
+    font-size: 0.95rem;
+    color: var(--color-dark);
+    line-height: 1.8;
+    font-weight: 500;
+    background: linear-gradient(135deg, rgba(232, 220, 196, 0.35) 0%, rgba(232, 220, 196, 0.25) 100%);
+    padding: 2.5rem 2.5rem;
+    border-radius: 8px;
+}
+
+.materiaux-description {
+    text-align: center;
+    background-color: rgba(232, 220, 196, 0.25);
+    padding: 2.5rem 2rem;
+    border-radius: 0;
+    box-shadow: none;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.materiaux-description p {
+    font-size: 1rem;
+    color: var(--color-dark);
+    line-height: 1.8;
+    font-weight: 500;
+}
+
+/* SECTION L'ARTISANAT AU FÉMININ */
+.artisanat-feminin {
+    background-color: var(--color-light);
+    padding: 1.5rem 2rem 5rem 2rem;
+}
+
+.artisanat-title {
+    text-align: center;
+    font-size: 2.2rem;
+    color: var(--color-dark);
+    margin: 0 auto 3rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 1.5rem;
+    max-width: 800px;
+}
+
+.artisanat-title::before,
+.artisanat-title::after {
+    content: '';
+    flex: 0 1 120px;
+    height: 1px;
+    background-color: #ccc;
+}
+
+.artisanat-container {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 3rem;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.artisanat-text {
+    background: linear-gradient(135deg, rgba(232, 220, 196, 0.4) 0%, rgba(232, 220, 196, 0.3) 100%);
+    padding: 2.5rem;
+    border-radius: 8px;
+}
+
+.artisanat-text p {
+    font-size: 0.95rem;
+    color: var(--color-dark);
+    line-height: 1.7;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+}
+
+.artisanat-text p:last-child {
+    margin-bottom: 0;
+}
+
+.artisanat-list {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0;
+}
+
+.artisanat-list li {
+    font-size: 0.95rem;
+    color: var(--color-dark);
+    line-height: 1.7;
+    font-weight: 500;
+    padding-left: 2rem;
+    position: relative;
+    margin-bottom: 0.8rem;
+}
+
+.artisanat-list li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: var(--color-primary);
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.artisanat-image {
+    text-align: center;
+}
+
+.artisanat-img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+}
+
+.artisanat-img:hover {
+    transform: scale(1.02);
+}
+
+/* SECTION VALEURS DÉTAILLÉE */
+.valeurs-detail {
+    background-color: var(--color-light);
+    padding: 2rem 2rem 5rem 2rem;
+}
+
+.valeurs-title {
+    text-align: center;
+    font-size: 2.2rem;
+    color: var(--color-dark);
+    margin: 0 auto 3rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 1.5rem;
+    max-width: 800px;
+}
+
+.valeurs-title::before,
+.valeurs-title::after {
+    content: '';
+    flex: 0 1 120px;
+    height: 1px;
+    background-color: #ccc;
+}
+
+.valeurs-detail-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.valeur-detail-card {
+    text-align: center;
+    padding: 2.5rem;
+    background-color: var(--color-secondary);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.valeur-detail-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.valeur-detail-icon {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 1.5rem;
+    display: block;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.valeur-detail-card:first-child .valeur-detail-icon {
+    filter: brightness(1.1) contrast(2) saturate(0) invert(0);
+    background-color: white;
+}
+
+.valeur-detail-card h3 {
+    font-size: 1.3rem;
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.valeur-detail-card p {
+    color: var(--color-dark);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    font-weight: 500;
+}
+
+/* SECTION NOTRE VISION */
+.vision {
+    background-color: var(--color-secondary);
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.vision-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.vision-title {
+    font-size: 2.5rem;
+    color: var(--color-dark);
+    margin-bottom: 2rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    position: relative;
+    display: inline-block;
+}
+
+.vision-title::before,
+.vision-title::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 80px;
+    height: 1px;
+    background-color: #ccc;
+}
+
+.vision-title::before {
+    right: calc(100% + 1.5rem);
+}
+
+.vision-title::after {
+    left: calc(100% + 1.5rem);
+}
+
+.vision-quote {
+    font-size: 1.3rem;
+    color: var(--color-dark);
+    line-height: 1.8;
+    font-style: italic;
+    font-weight: 400;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* SECTION MOT DE LA FONDATRICE */
+.fondatrice {
+    background-color: var(--color-light);
+    padding: 5rem 2rem;
+}
+
+.fondatrice-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.fondatrice-title {
+    font-size: 2.5rem;
+    color: var(--color-dark);
+    margin-bottom: 3rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-align: center;
+    position: relative;
+    display: inline-block;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.fondatrice-title::before,
+.fondatrice-title::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 80px;
+    height: 1px;
+    background-color: #ccc;
+}
+
+.fondatrice-title::before {
+    right: calc(100% + 1.5rem);
+}
+
+.fondatrice-title::after {
+    left: calc(100% + 1.5rem);
+}
+
+.fondatrice-content {
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.fondatrice-image {
+    position: relative;
+    width: 100%;
+    height: 450px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.fondatrice-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.fondatrice-image:hover .fondatrice-img {
+    transform: scale(1.05);
+}
+
+.fondatrice-text {
+    padding-left: 2rem;
+}
+
+.fondatrice-quote {
+    font-size: 1.2rem;
+    color: var(--color-dark);
+    line-height: 1.8;
+    font-style: italic;
+    margin-bottom: 2rem;
+    font-weight: 400;
+}
+
+.fondatrice-name {
+    font-size: 1rem;
+    color: var(--color-primary);
+    font-weight: 600;
+    font-style: italic;
+    text-align: right;
+    margin-top: 1.5rem;
+}
+
+/* SECTION DIGITAL */
+.digital-section {
+    background: linear-gradient(rgba(139, 111, 71, 0.7), rgba(62, 39, 35, 0.7)),
+                url('images/propos/App.jpeg') center/cover no-repeat;
+    padding: 5rem 2rem;
+    color: white;
+}
+
+.digital-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.digital-text h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    line-height: 1.3;
+}
+
+.digital-intro {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    font-weight: 500;
+}
+
+.digital-list {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0;
+}
+
+.digital-list li {
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-bottom: 0.8rem;
+    padding-left: 2rem;
+    position: relative;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.digital-list li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: var(--color-accent);
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.digital-conclusion {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-top: 1.5rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    font-weight: 500;
+}
+
+.digital-image {
+    position: relative;
+    height: 500px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.digital-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.digital-image:hover .digital-img {
+    transform: scale(1.05);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .page-title h1 {
+        font-size: 2rem;
+    }
+
+    .heritage-section {
+        padding: 3rem 1.5rem;
+    }
+
+    .heritage-section h2 {
+        font-size: 1.8rem;
+    }
+
+    .heritage-section p {
+        font-size: 1rem;
+    }
+
+    .pourquoi-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .pourquoi-section h2 {
+        font-size: 1.8rem;
+    }
+
+    .artisanat-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .artisanat-feminin h2 {
+        font-size: 1.8rem;
+    }
+
+    .artisanat-feminin h2::before,
+    .artisanat-feminin h2::after {
+        width: 60px;
+    }
+
+    .artisanat-feminin h2::before {
+        transform: translateX(-80px);
+    }
+
+    .artisanat-feminin h2::after {
+        transform: translateX(80px);
+    }
+
+    .valeurs-detail-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .vision-title {
+        font-size: 2rem;
+    }
+    
+    .vision-title::before,
+    .vision-title::after {
+        width: 40px;
+    }
+    
+    .vision-quote {
+        font-size: 1.1rem;
+    }
+    
+    .fondatrice-title {
+        font-size: 2rem;
+    }
+    
+    .fondatrice-title::before,
+    .fondatrice-title::after {
+        width: 40px;
+    }
+    
+    .fondatrice-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .fondatrice-image {
+        height: 400px;
+        max-width: 350px;
+        margin: 0 auto;
+    }
+    
+    .fondatrice-text {
+        padding-left: 0;
+        text-align: center;
+    }
+    
+    .fondatrice-quote {
+        font-size: 1.1rem;
+    }
+    
+    .fondatrice-name {
+        text-align: center;
+    }
+    
+    .digital-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .digital-text h2 {
+        font-size: 2rem;
+    }
+    
+    .digital-image {
+        height: 400px;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .page-title h1 {
+        font-size: 1.5rem;
+    }
+
+    .heritage-section {
+        padding: 2rem 1rem;
+        min-height: 300px;
+    }
+
+    .heritage-section h2 {
+        font-size: 1.5rem;
+    }
+
+    .heritage-content {
+        padding-left: 0;
+    }
+
+    .pourquoi-text p,
+    .materiaux-description p,
+    .artisanat-text p {
+        font-size: 0.9rem;
+    }
+
+    .artisanat-feminin h2 {
+        font-size: 1.5rem;
+    }
+
+    .artisanat-feminin h2::before,
+    .artisanat-feminin h2::after {
+        width: 40px;
+    }
+
+    .artisanat-feminin h2::before {
+        transform: translateX(-60px);
+    }
+
+    .artisanat-feminin h2::after {
+        transform: translateX(60px);
+    }
+
+    .artisanat-text {
+        padding: 1.5rem;
+    }
+
+    .artisanat-img {
+        height: 280px;
+    }
+    
+    .vision-title {
+        font-size: 1.8rem;
+    }
+    
+    .vision-title::before,
+    .vision-title::after {
+        display: none;
+    }
+    
+    .vision-quote {
+        font-size: 1rem;
+    }
+    
+    .fondatrice-title {
+        font-size: 1.8rem;
+    }
+    
+    .fondatrice-title::before,
+    .fondatrice-title::after {
+        display: none;
+    }
+    
+    .fondatrice-image {
+        height: 350px;
+    }
+    
+    .fondatrice-quote {
+        font-size: 1rem;
+    }
+    
+    .fondatrice-name {
+        font-size: 0.95rem;
+    }
+    
+    .digital-text h2 {
+        font-size: 1.8rem;
+    }
+    
+    .digital-intro,
+    .digital-conclusion {
+        font-size: 1rem;
+    }
+    
+    .digital-list li {
+        font-size: 0.95rem;
+    }
+    
+    .digital-image {
+        height: 350px;
+    }
+}
